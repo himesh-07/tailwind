@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const  Admin = ()=> {
+export default function Admin() {
   const stats = [
     { label: "Total Reports", value: 13, icon: "📊" },
     { label: "Resolution Rate", value: "8%", icon: "📈" },
@@ -28,7 +28,7 @@ const  Admin = ()=> {
       type: "Illegal Dumping",
       status: "Open",
       by: "Prabhat",
-      location: "Ring road-1 Road, bhilai",
+      location: "Ganesh Mandir Road, Panvel",
       date: "26 Sept 2025, 05:42 pm",
       img: "https://via.placeholder.com/400x200",
     },
@@ -36,8 +36,8 @@ const  Admin = ()=> {
       id: "17834884927",
       type: "Pothole",
       status: "Open",
-      by: "karan",
-      location: "central park, delhi",
+      by: "YTKD Team",
+      location: "Badala, Himachal Pradesh",
       date: "26 Sept 2025, 09:04 pm",
       img: "https://via.placeholder.com/400x200",
     },
@@ -45,8 +45,8 @@ const  Admin = ()=> {
       id: "17837412884",
       type: "Roadside Garbage",
       status: "Open",
-      by: "Vaishnavi ",
-      location: " pune, Maharashtra",
+      by: "Vaishnavi Gaipaal",
+      location: "Panvel Taluka, Maharashtra",
       date: "24 Sept 2025, 04:50 pm",
       img: "https://via.placeholder.com/400x200",
     },
@@ -117,7 +117,7 @@ const  Admin = ()=> {
           >
             <option>All States</option>
             <option>Maharashtra</option>
-            <option>delhi</option>
+            <option>Himachal Pradesh</option>
           </select>
 
           <select
@@ -141,7 +141,7 @@ const  Admin = ()=> {
       <div className="grid md:grid-cols-3 gap-6">
         {reports.map((report, index) => (
           <div key={index} className="bg-white shadow rounded-lg p-4">
-            
+            <p className="font-semibold text-gray-700 mb-1">Responsible Leaders</p>
 
             {/* Dummy leader icons */}
             <div className="flex gap-2 mb-3">
@@ -164,7 +164,12 @@ const  Admin = ()=> {
             <p className="text-gray-600 text-sm">📍 {report.location}</p>
             <p className="text-gray-500 text-sm mb-3">🕒 {report.date}</p>
 
-           
+            <div className="flex flex-col gap-2 mt-3">
+              <button className="border px-3 py-2 rounded-md">Certificate</button>
+              <button className="border px-3 py-2 rounded-md">Share</button>
+              <button className="border px-3 py-2 rounded-md">Printable Complaint</button>
+              <button className="border px-3 py-2 rounded-md">Email Authorities</button>
+            </div>
           </div>
         ))}
       </div>
@@ -172,5 +177,3 @@ const  Admin = ()=> {
     </div>
   );
 }
-
-export default Admin

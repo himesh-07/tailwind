@@ -6,7 +6,9 @@ import Report from './components/Report';
 import Login from './components/Login';
 
 import About from './pages/About';
-// import Admin from "./components/admin";
+import Admin from "./components/admin";
+
+
 
 
 
@@ -51,7 +53,7 @@ function App() {
             <Route path="/report" element={<Report />} />
             <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/admin" element={<Admin />} /> */}
+            <Route path="/admin" element={<Admin />} /> 
           </Routes>
         </div>
 
