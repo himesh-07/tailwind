@@ -5,6 +5,7 @@ import Report from './components/Report';
 import Login from './components/Login';
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import About from './pages/About';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="*" element={<Home />} />
             <Route path="/report" element={<Report />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
 
