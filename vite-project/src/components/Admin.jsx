@@ -117,7 +117,7 @@ export default function Admin() {
           >
             <option>All States</option>
             <option>Maharashtra</option>
-            <option>Chattisgarh</option>
+            <option>Chattigarhh</option>
           </select>
 
           <select
