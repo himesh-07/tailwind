@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Admin() {
+const  Admin = ()=> {
   const stats = [
     { label: "Total Reports", value: 13, icon: "📊" },
     { label: "Resolution Rate", value: "8%", icon: "📈" },
@@ -172,3 +172,5 @@ export default function Admin() {
     </div>
   );
 }
+
+export default Admin

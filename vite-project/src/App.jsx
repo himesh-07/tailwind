@@ -1,18 +1,19 @@
 
 
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './components/Home';
 import Report from './components/Report';
 import Login from './components/Login';
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from './pages/About';
-import Admin from './components/admin';
+import Admin from "./components/admin";
+
 
 
 function App() {
   return (
   
-    
+
     <>
       <BrowserRouter>
 
