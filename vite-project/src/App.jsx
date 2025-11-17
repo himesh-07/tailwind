@@ -1,35 +1,50 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import Home from './components/Home';
+import Report from './components/Report';
+import Login from './components/Login';
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <nav className="bg-amber-400 shadow-md fixed top-0 left-0 w-full z-50 h-24">
+      <BrowserRouter>
 
+        {/* Navbar Should Stay on ALL pages */}
+        <nav className="bg-blue-600 shadow-md fixed top-0 left-0 w-full z-50 h-24">
+          <h1 className="text-2xl font-bold text-amber-50 absolute top-5 left-4">
+            CIVIC SOLVE
+          </h1>
 
-        {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600 absolute top-5 left-0 size-50 ">MyLogo</h1>
+          <ul className="hidden md:flex gap-8 text-amber-50 font-medium absolute top-5 right-10 whitespace-nowrap">
+            <li className="hover:text-sky-400 cursor-pointer">HOME</li>
+            <li className="hover:text-amber-50 cursor-pointer">TRACK REPORT</li>
+            <li className="hover:text-amber-50 cursor-pointer">Admin</li>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-fuchsia-500-700 font-medium absolute top-5 right-65 size-16 ...">
-          <li className="hover:text-blue-600 cursor-pointer">Home</li>
-          <li className="hover:text-blue-600 cursor-pointer">About</li>
-          <li className="hover:text-blue-600 cursor-pointer">Services</li>
-          <li className="hover:text-blue-600 cursor-pointer">Contact</li>
-        </ul>
+            <li>
+              <Link
+                to="/login"
+                className="bg-white text-blue-600 px-4 py-1 rounded-md font-semibold hover:bg-gray-100 duration-200"
+              >
+                LOGIN
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
-          
-      
-    </nav>
-  
+        {/* Routing */}
+        <div className="pt-28">
+          <Routes>
+            <Route path="*" element={<Home />} />
+            <Route path="/report" element={<Report />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </div>
 
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
