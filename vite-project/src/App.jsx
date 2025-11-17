@@ -6,6 +6,7 @@ import Login from './components/Login';
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from './pages/About';
+import Admin from './components/admin';
 
 function App() {
   return (
@@ -21,7 +22,12 @@ function App() {
           <ul className="hidden md:flex gap-8 text-amber-50 font-medium absolute top-5 right-10 whitespace-nowrap">
             <li className="hover:text-sky-400 cursor-pointer">HOME</li>
             <li className="hover:text-amber-50 cursor-pointer">TRACK REPORT</li>
-            <li className="hover:text-amber-50 cursor-pointer">Admin</li>
+            <li><Link
+                to="/admin"
+                className="bg-white text-blue-600 px-4 py-1 rounded-md font-semibold hover:bg-gray-100 duration-200"
+              >
+                ADMIN
+              </Link></li>
 
             <li>
               <Link
@@ -41,6 +47,7 @@ function App() {
             <Route path="/report" element={<Report />} />
             <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />
+            <Route path="/admin" element={<Admin/>} />
           </Routes>
         </div>
 
