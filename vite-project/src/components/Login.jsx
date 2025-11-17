@@ -6,7 +6,7 @@
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-full max-w-sm bg-white p-6 rounded-xl shadow-lg">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-700">
-          Login
+          Loginnnn
         </h2>
 
         <form className="space-y-4">
