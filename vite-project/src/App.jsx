@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 
 import Home from './components/Home';
 import Report from './components/Report';
@@ -7,6 +7,7 @@ import Login from './components/Login';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from './pages/About';
 import Admin from './components/admin';
+
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
             <Route path="/report" element={<Report />} />
             <Route path="/login" element={<Login />} />
             <Route path="/about" element={<About />} />
-            <Route path="/admin" element={<Admin/>} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </div>
 
